@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production",
+        "build-inspections": "cd nova-components/Inspections && npm run dev",
+        "build-inspections-prod": "cd nova-components/Inspections && npm run prod",
+        "build-schedule-recurrence": "cd nova-components/ScheduleRecurrence && npm run dev",
+        "build-schedule-recurrence-prod": "cd nova-components/ScheduleRecurrence && npm run prod",
+        "build-reports": "cd nova-components/Reports && npm run dev",
+        "build-reports-prod": "cd nova-components/Reports && npm run prod"
+    },
+    "devDependencies": {
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14"
+    }
+}

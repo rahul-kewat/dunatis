@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0f7503c6-9a36-4124-b4e2-a74139a6f43d" name="staging dunatis">
+        <fileTransfer rootFolder="/home/forge/staging.dunatis.app" accessType="SFTP" host="138.68.171.101" port="22" sshConfigId="61790fcd-5fdf-4ee1-9925-d81dcde9e6f5" sshConfig="forge@138.68.171.101:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
