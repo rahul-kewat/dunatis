@@ -2,34 +2,27 @@
 
 namespace Acme\Reports;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Menu\MenuSection;
-use Laravel\Nova\Nova;
-use Laravel\Nova\Tool;
+use Laravel\Nova\ResourceTool;
 
-class Reports extends Tool
+class Reports extends ResourceTool
 {
     /**
-     * Perform any tasks that need to happen when the tool is booted.
+     * Get the displayable name of the resource tool.
      *
-     * @return void
+     * @return string
      */
-    public function boot()
+    public function name()
     {
-        Nova::script('reports', __DIR__.'/../dist/js/tool.js');
-        Nova::style('reports', __DIR__.'/../dist/css/tool.css');
+        return 'Reports';
     }
 
     /**
-     * Build the menu that renders the navigation links for the tool.
+     * Get the component name for the resource tool.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @return mixed
+     * @return string
      */
-    public function menu(Request $request)
+    public function component()
     {
-        return MenuSection::make('Reports')
-            ->path('/reports')
-            ->icon('server');
+        return 'reports';
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "acme/reports",
-    "description": "A Laravel Nova tool.",
+    "description": "A Laravel Nova resource tool.",
     "keywords": [
         "laravel",
         "nova"

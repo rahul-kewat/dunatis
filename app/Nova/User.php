@@ -11,6 +11,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Coroowicaksono\ChartJsIntegration\StackedChart;
 
 class User extends Resource
 {
@@ -90,7 +91,9 @@ class User extends Resource
      */
     public function cards(NovaRequest $request)
     {
-        return [];
+        return [
+            
+        ];
     }
 
     /**

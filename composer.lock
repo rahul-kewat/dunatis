@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3521524ad12194a627f489e5245c9a35",
+    "content-hash": "c3786a80b6010226ab83dd24c8d11147",
     "packages": [
         {
             "name": "acme/reports",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "./nova-components/Reports",
-                "reference": "583dec5826501af5b8c04aaaae5c2d9c6d9a2431"
+                "reference": "2b0af483261c440053063c2426426d6c48c7a302"
             },
             "require": {
                 "php": "^7.3|^8.0"
@@ -33,7 +33,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "A Laravel Nova tool.",
+            "description": "A Laravel Nova resource tool.",
             "keywords": [
                 "laravel",
                 "nova"
@@ -292,6 +292,69 @@
                 }
             ],
             "time": "2021-10-10T11:59:43+00:00"
+        },
+        {
+            "name": "coroowicaksono/chart-js-integration",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coroo/nova-chartjs.git",
+                "reference": "536abe58319b5eeae86d0a11a7b08609a209d1d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coroo/nova-chartjs/zipball/536abe58319b5eeae86d0a11a7b08609a209d1d0",
+                "reference": "536abe58319b5eeae86d0a11a7b08609a209d1d0",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^4.0",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Coroowicaksono\\ChartJsIntegration\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Coroowicaksono\\ChartJsIntegration\\": "src/",
+                    "Coroowicaksono\\ChartJsIntegration\\Api\\": "src/api"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kuncoro Wicaksono",
+                    "email": "coroo.wicaksono@gmail.com",
+                    "role": "Software Engineer"
+                }
+            ],
+            "description": "A Simple Dashboard Chart in Laravel Nova using Chart JS. Starting create your own dashboard with Chart JS Integration can save your time and help you maintain consistency across standard elements such as Bar, Stacked, Line, Area, Doughnut and Pie Chart.",
+            "homepage": "https://github.com/coroo",
+            "keywords": [
+                "chart js",
+                "laravel",
+                "nova",
+                "stacked chart"
+            ],
+            "support": {
+                "issues": "https://github.com/coroo/nova-chartjs/issues",
+                "source": "https://github.com/coroo/nova-chartjs/tree/v0.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.buymeacoffee.com/coroowicaksono",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-05-15T10:46:32+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -3953,11 +4016,11 @@
         },
         {
             "name": "sbase/schedule-recurrence",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "./nova-components/ScheduleRecurrence",
-                "reference": "0895f80cb69ed47aa6ce00881270edbb492ff2a5"
+                "reference": "9721c5148a367cb6afc6f05b17d15520b7e3bf30"
             },
             "require": {
                 "php": ">=7.1.0"

@@ -23,10 +23,16 @@
         {
             "type": "path",
             "url": "./nova-components/Reports"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Reports"
         }
     ],
     "require": {
         "php": "^8.0.2",
+        "acme/reports": "*",
+        "coroowicaksono/chart-js-integration": "^0.4.0",
         "digital-creative/collapsible-resource-manager": "^1.4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -36,11 +42,10 @@
         "laravel/sanctum": "^2.15.1",
         "laravel/tinker": "^2.7.2",
         "outl1ne/nova-multiselect-field": "^4.0",
+        "sbase/schedule-recurrence": "*",
         "spatie/laravel-permission": "^5.5.2",
         "spatie/laravel-sluggable": "^3.4.0",
-        "sbase/schedule-recurrence": "*",
-        "wehaa/custom-links": "^0.1.1",
-        "acme/reports": "*"
+        "wehaa/custom-links": "^0.1.1"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",

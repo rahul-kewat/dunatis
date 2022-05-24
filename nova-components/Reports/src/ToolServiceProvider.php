@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
-use Acme\Reports\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -22,7 +21,8 @@ class ToolServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            //
+            Nova::script('reports', __DIR__.'/../dist/js/tool.js');
+            Nova::style('reports', __DIR__.'/../dist/css/tool.css');
         });
     }
 
@@ -37,12 +37,9 @@ class ToolServiceProvider extends ServiceProvider
             return;
         }
 
-        Nova::router(['nova', Authorize::class], 'reports')
-            ->group(__DIR__.'/../routes/inertia.php');
-
-        Route::middleware(['nova', Authorize::class])
-            ->prefix('nova-vendor/reports')
-            ->group(__DIR__.'/../routes/api.php');
+        Route::middleware(['nova'])
+                ->prefix('nova-vendor/reports')
+                ->group(__DIR__.'/../routes/api.php');
     }
 
     /**

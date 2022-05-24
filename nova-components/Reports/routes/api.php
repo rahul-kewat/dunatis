@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you may register API routes for your tool. These routes
-| are loaded by the ServiceProvider of your tool. They are protected
-| by your tool's "Authorize" middleware by default. Now, go build!
+| are loaded by the ServiceProvider of your tool. You're free to add
+| as many additional routes to this file as your tool may require.
 |
 */
 
-// Route::get('/', function (Request $request) {
+// Route::get('/endpoint', function (Request $request) {
 //     //
 // });

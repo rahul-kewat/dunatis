@@ -10,6 +10,7 @@ use App\Nova\ItemType;
 use App\Nova\Property;
 use App\Nova\Role;
 use App\Nova\User;
+use App\Nova\Report;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
@@ -20,6 +21,8 @@ use Laravel\Nova\Menu\MenuSection;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 use Vyuldashev\NovaPermission\NovaPermissionTool;
+use Coroowicaksono\ChartJsIntegration\StackedChart;
+
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -48,10 +51,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     MenuItem::resource(InspectionItem::class),
                     MenuItem::resource(Inspection::class),
                 ])->icon('check'),
-                MenuSection::make('Reports', [
-                    MenuItem::resource(Role::class),
-                ])->icon('check'),
-                MenuItem::externalLink('Help and FAQ','https://dunatis.app/knowledge-base/')
+                MenuItem::resource(Role::class),
+                MenuItem::resource(Report::class),
+                MenuItem::externalLink('Help and FAQ', 'https://dunatis.app/knowledge-base/')
             ];
         });
     }
@@ -64,9 +66,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -119,4 +121,5 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         //
     }
+
 }
